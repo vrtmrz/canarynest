@@ -17,7 +17,7 @@ $ fly deploy
 ### Configure Canary Perch
 
 1. Set the `Canary nest URL` to the endpoint of our server.
-   This should be `https://example.fly.io/_watch?q=das9u3rFAHU`.
+   This should be like `https://example.fly.io/_watch?q=das9u3rFAHU`.
 
 2. Set the `Interesting paths` as you want to receive updates. This is a regular expression. If you want to test TagFolder (very honourable for me), you should set this `^plugins/obsidian-tagfolder`.
 
@@ -35,7 +35,7 @@ $ curl --upload-file manifest.json https://example.fly.io/plugins/obsidian-tagfo
 
 Alternatively, you can write a small plugin to automate the process in esbuild.
 
-You can see the real example on [esbuild.config.mjs in canaryperch]()
+You can see the real example on [esbuild.config.mjs in canaryperch](https://github.com/vrtmrz/canaryperch/blob/4b8614f9a45dffabd394dec8cdfe3800cc5b8875/esbuild.config.mjs#L18)
 ```javascript
 /** @type esbuild.Plugin */
 const sendToCanaryNest = {
